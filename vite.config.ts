@@ -24,6 +24,7 @@ const config: UserConfigExport = () => {
         format: "esm",
       },
     },
+    base: process.env.PUBLIC_PATH || "/",
   };
 };
 
