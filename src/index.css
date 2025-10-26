@@ -222,6 +222,10 @@ h6 {
   gap: 8px;
 }
 
+.text-field > label {
+    min-width: 24px;
+}
+
 .text-field input {
   flex: 1 1 0;
   box-sizing: border-box;

@@ -1,7 +1,16 @@
 import ReactDOM from "react-dom/client";
-import { EditorStaticExample } from "./components";
 import "./index.css";
+import * as ReactRedux from "react-redux";
+import { store } from "./config";
+import { DBInitGate } from "./components/dbInitGate";
+import { Editor } from "./components/editor";
 
 const root = ReactDOM.createRoot(document.getElementById("root")!);
 
-root.render(<EditorStaticExample />);
+root.render(
+  <ReactRedux.Provider store={store}>
+    <DBInitGate>
+      <Editor />
+    </DBInitGate>
+  </ReactRedux.Provider>
+);

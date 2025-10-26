@@ -1,11 +1,11 @@
 import classNames from "classnames";
-import { FC } from "react";
+import { FC, FocusEventHandler } from "react";
 import { SelectableContainer } from "../selectable-container";
 
 export interface RowProps {
   children?: React.ReactNode;
   selected?: boolean;
-  onSelect?(): void;
+  onSelect?: FocusEventHandler<HTMLDivElement>;
 }
 
 export const Row: FC<RowProps> = ({ selected, ...props }) => (
